@@ -1,0 +1,23 @@
+    <h3>  Trending</h3>
+ 
+  <% @advertisements.each do |advertisement| %>
+    <%= link_to advertisement, class:'text-decoration-none' do %>
+      <div class="card" style="width: 55%;
+      margin-left:20%;">
+       <img class="card-img-top" src=<%= advertisement.image %> alt:'Card image cap'>
+        <div class="card-body">
+         <h5 class="card-title mb-1 text-dark"><%= advertisement.title %></h5>
+         <p class="text-secondary mb-0"><%= advertisement.description %></p>
+         <br/>
+         <%=link_to 'View', advertisement,class:'btn btn-secondary' %>
+         <%=link_to 'Edit', edit_advertisement_path(advertisement),class:'btn btn-secondary' %>
+         <%=link_to 'Delete', advertisement, method: :delete,data:{ confirm:'Are you sure?'},class:'btn btn-dark' %>
+         
+        </div>
+      </div>
+    <% end %>
+    <br/> <br/>
+  <% end %>
+
+
+   

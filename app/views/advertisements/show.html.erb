@@ -1,0 +1,21 @@
+
+<div class="jumbotron">
+  <p >
+  	<strong>Image_URL:</strong>
+  	<%= @advertisement.image %>
+  </p>
+  <p class="lead">
+  	<strong>Title:</strong>
+  	<%= @advertisement.title %>.
+  </p>
+  <hr class="my-4">
+  <p>
+  	<strong>Description:</strong>
+  	<%= @advertisement.description %>
+  </p>
+  <p class="lead">
+    <%= link_to 'Edit', edit_advertisement_path(@advertisement),class:"btn btn-secondary" %> 
+<%= link_to 'Back', advertisements_path,class:"btn btn-secondary" %>
+  </p>
+</div>
+
